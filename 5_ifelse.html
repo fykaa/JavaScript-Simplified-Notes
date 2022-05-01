@@ -1,0 +1,161 @@
+<!-- If-else Conditionals & Switch Case in JavaScript -->
+<!-- In this tutorial, we will learn about scoping in JavaScript and then we will move on to If-Else and Switch Case conditions.
+
+var string1 = "This is a string";
+     console.log(string1);
+We will expect the output as “This is a string”. But if we update it as-
+
+var string1 = "This is a string2";
+     console.log(string1); 
+
+So here, we have noticed that the value of the variable gets easily changed and it can create a problem if we do not remember the initial value giving the variable. It is because the scope of var is global here. But if we declare the var inside any function, then its scope will remain under that function. 
+
+If we write as follows-
+    let a = "u";
+     {
+     let a = "u6";
+     console.log(a)
+     }
+     console.log(a)
+
+     In this example, the value of a is ‘u6’ under a particular scope but the value of a declared outside the scope is ‘u’. You will get the output
+     However, it is highly recommended to use let instead of var to avoid confusion of the scope of the variable.
+
+If we write as follows-
+const a = "This cannot be changed";
+a = "I want to change this. This cannot be changed";
+console.log(a);
+In the above example, we have declared a as a constant, therefore, its value cannot be changed further by any means. Hence, it shows an error.
+
+
+Now let us move towards conditional statements. If we write the code as follows-
+
+let age = 5;
+     if(age>18){
+         console.log("You can drink water");
+     }
+     else if(age==2){
+         console.log("Age is 2")
+     }
+     else if(age==5){
+         console.log("Age is 5")
+     }
+     else{
+         console.log("You can drink Cold Drink");
+     }
+
+    The output of the above code will be 5 as shown below-
+
+It is because we set the age initially as 5 and it prints the condition which is true for that particular statement. It is known as an if-else ladder.
+
+Let us now understand switch-case statements. If we write as follows-
+const cups = 41; 
+    switch (cups) {
+        case 4:
+            console.log("The value of cups is 4")
+            break;
+
+        case 41:
+            console.log("The value of cups is 41")
+            break;
+
+        case 42:
+            console.log("The value of cups is 42")
+            break;
+
+        case 43:
+            console.log("The value of cups is 43")
+            break;
+    
+        default:
+            console.log("The value of cups is none of 4, 41, 42, 43")
+            break;
+    }
+the ouputIt is because the case has matched exactly with the value of cups. However, if we remove the break statement then all the values will be printed. And in case, no value matches with any case, then the default statement will be printed.
+
+So I believe, you have understood the concepts of scope and conditional statements. In the upcoming videos, we will learn some more advanced concepts in JavaScripts. Till then keep practicing and stay with the tutorials.
+    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Conditional Statements</title>
+    <script>
+        var a = "harry"
+        console.log(a)
+        var a = "not harry"
+        console.log(a)
+        // Not changing a var inside function
+        let b = "sejal";
+        {
+            let b = "soham";
+            console.log(b);
+        }
+        console.log(b);
+        // Cant change a constant function
+        const c = "This cannot be changed";
+        console.log(c);
+
+        // c = "I want to change this. This cannot be changed";
+        // console.log(c);
+
+        // CONDITIONAL STATEMENTS
+        let age = 5;
+        if (age > 18) {
+            console.log("You can drink")
+        }
+        else if (age == 2) {
+            console.log("Age is 2")
+        }
+        else if (age == 5) {
+            console.log("Age is 5")
+        }
+        else {
+            console.log("You can drink Cold Drink");
+        }
+
+        // SWITCH CASE STATEMENTS
+        const cups = 41;
+        switch (cups) {
+            case 4:
+                console.log("The value of cups is 4")
+                break;
+
+            case 41:
+                console.log("The value of cups is 41")
+                break;
+
+            case 42:
+                console.log("The value of cups is 42")
+                break;
+
+            case 43:
+                console.log("The value of cups is 43")
+                break;
+
+            default:
+                console.log("The value of cups is none of 4, 41, 42, 43")
+                break;
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+    </ul>
+</body>
+
+</html>

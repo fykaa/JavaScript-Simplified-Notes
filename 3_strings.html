@@ -1,0 +1,95 @@
+<!-- Strings in JavaScript -->
+
+<!-- Strings In JavaScript
+In this tutorial, we are going to learn about Strings in JavaScript and how to make them, what are the methods to manipulate those Strings, and how to display them in the browser using JavaScript. A JavaScript string is zero or more characters written inside the quotes. The String object is used to represent and manipulate a sequence of characters.
+
+To start, we will add the basic HTML code as shown below-
+
+To write the JavaScript we will include a <script> tag. For example, if we write-
+
+var string = "this";
+
+We will see that the “this” word is reflected back on the console tab in the browser. However, apart from the double quotes, we can also write a Sting in a single quote as ‘this’. It is recommended to use double quotes when we are using single quotes between the strings. For example-
+
+var string = 'thi"s';
+If we declare new variables with strings and concatenate them with a ‘+’ sign as shown her
+
+        console.log(string1 +" guy called "+ name + message)
+
+Let us now understand what are template literals. These are written under ` sign. If we write the code as below-
+
+var channel = 'MAXWILLEae';
+ var temp = `${name} is a 'nice' person "and" he has a channel called ${channel}`;
+
+$ symbol is used here to pick that particular string from the variable. And if we do, console.log(temp)
+
+The main benefit of using this method is, we can use both double quotes or single quotes to identify the strings. 
+we are using ` this symbol (below esc in teh keyboard)
+
+To extract the number of characters in a particular string we can take the help of length function as shown below-
+
+var len = name.length;
+console.log(`the length of ${name} is ${len});
+It will return the number of characters in the variable name. We also have escape sequence characters in the Strings. For example, if we write-
+
+
+console.log("Hello world\nHarry");
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in JS</title>
+    <script>
+        var string1 = "this";
+        var string2 = "thi's";
+        var string3 = 'thi"s';
+        console.log(string1);
+        console.log(string2);
+        console.log(string3);
+
+        var name = 'Brent';
+        var message = 'Rivera is a good boy';
+        console.log(string1 + " guy called " + name + message);
+
+        var channel = 'MAXWILLEae';
+        // $ symbol is used here to pick that particular string from the variable
+        var temp = `${name} is a 'nice' person "and" he has a channel called ${channel}`;
+        // we can use both double quotes or single quotes if we use ` (below esc in keyboard)
+        console.log(temp);
+
+        var len = name.length;
+        console.log(`Length of ${name} is ${len}`);
+
+        console.log("Hello world\n How are youo");
+        console.log("Hello \\nworld\nHarry\tand");
+        // these gave \ symbol, new line, tab 
+
+        var y = new String("this");
+        console.log(y);
+        document.getElementById('content').innerHTML = '<h3>this is an h3 heading</h3>'
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>This IS Heading </h1>
+        <div id="content"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sunt iusto! Ea tempore saepe ipsum
+            voluptates ex debitis qui reprehenderit eius est quae?
+        </p>
+
+    </div>
+</body>
+
+</html>
