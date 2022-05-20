@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRYIAL</title>
+    <style>
+        #btn{
+            color: wheat;
+            background-color: purple;
+            border: solid 2px;
+            padding: 6px;
+            margin: 6px;
+            border-radius: 6px;
+        }
+    </style>
+    <script>
+        // let andy = 34;
+        // console.log(andy);
+
+        // let dibi = "harra";
+        // console.log(dibi);
+
+        // let arr = [ "shloka", 334, "harra aa", 32.2];
+        // console.log(arr);
+        // console.log(arr[2]);
+
+        let obj= {
+            "key1": 34,
+            342: "haesd",
+            "SJWETA": "HOUSWORKER",
+            "shubham": "emploee",
+            "dancer": "kandha",
+        };
+        // console.log(obj);
+
+        // let a = 323;
+        // if(a>2342){
+        //     console.log("congrats");
+        // }
+        // else{
+        //     console.log("idkk");
+        // }
+
+        // switch(a*3){
+        //     case 646:
+        //         console.log("woh ultiple of 2");
+        //         break;
+        //     case 646:
+        //         console.log("correct");
+        //         break;
+        //     default: 
+        //     console.log("idkgesg");
+        // }
+
+        // let message = "morrning";
+        // let name = "shweta";
+
+        // function greet(name, message){
+        //     console.log("hello "+ name+" "+ message);
+        // }
+        // greet(name, message);
+        // greet("harry", "marja");
+
+        // function  product(num1, num2, num3){
+        //     let prod = num1* num2*num3;
+        //     return prod;
+        // }
+        // let pros = product(2,4,1);
+        // console.log(pros);
+
+        // alert("stop being so pathetic");
+        // let prmm = prompt("shut the fuck up", "i wont");
+
+        // if(prmm){
+        //     console.log("youre right buddy");
+        // }
+        // else{
+        //     console.log("hahaha");
+        // }
+
+        // confirm("are you srius");
+
+
+        // let friends = [ "shwdssta", "sejal", "mission", "dg4", "terg"];
+
+        // friends.forEach(
+        //     function f(element){
+        //         console.log("morning "+ element);
+        // });
+
+        // for (const naam of friends) {
+        //     console.log("kaisi kaisa h " + naam);
+        // }
+
+        // for (const key in obj) {
+        //     console.log(`For the ${key} , the ${obj[key]}`);
+        // }
+        // console.log(obj[1]);
+
+            
+
+
+
+    </script>
+
+</head>
+<body>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque hic quod distinctio aliquid placeat tenetur quam beatae saepe eaque aut at deleniti eos modi fugit ad dolorum accusantium laudantium assumenda, nemo voluptatem.
+    <div class="container" id="main">
+    <ul id="nav">
+        <li>namr1</li>
+        <li>namr2</li>
+        <li>namr3</li>
+        <li>namr4</li>
+    </ul>
+
+    </div>
+
+    <div style="border: solid 2px black;
+    border-radius: 8px;
+    background-color: #619d61;
+    position: absolute;
+    top: 75px;
+    right: 100px;
+    /* display: inline; */
+    padding: 5px;
+    margin: 8px; "
+
+    id="box">
+        MOUSEOVER/MOUSEOUT
+    </div>
+
+    <div id="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est porro mollitia cum id laboriosam excepturi voluptas officia repellat molestiae ipsum nihil non numquam eveniet ut commodi architecto sapiente similique, ad, fuga quasi quis.
+    </div>
+
+    <button id="btn" onclick="toggleHide()">SHOW OR HIDE</button>
+
+    <script>
+
+        // DOM document object model manipulations
+        // let idd = document.getElementById("main");
+        // console.log(idd);
+
+        // let classs = document.getElementsByClassName("container");
+        // console.log(classs);
+
+        // let adding = document.querySelector(".container");
+        // console.log(adding);
+
+        // let subs = document.querySelectorAll("#nav");
+        // console.log(subs);
+
+        function toggleHide(){
+            let para = document.getElementById("container");
+            let btn = document.getElementById("btn");
+            if (para.style.display != 'none'){
+                para.style.display = 'none';
+            }
+            else{
+                para.style.display = 'block';
+            }
+        }
+
+        let box = document.getElementById("box");
+        box.addEventListener(
+            'mouseover', function run(){
+                alert("Mouse moved in");
+            }
+        );
+
+        box.addEventListener(
+            'mouseout', function run(){
+                console.log("MOuse went out");
+            }
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!-- Events & Listening to Events -->
+
+<!-- 
+    
+In this tutorial, we are going to learn how we can make browser events come into action and how should we use them. An HTML event can be something the browser does or something a user does.
+
+Here are some examples of HTML events:
+
+An HTML web page has finished loading
+An HTML input field was changed
+An HTML button was clicked
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+
+Here is a list of some common HTML events-
+
+Onchange-  An HTML element has been changed
+Onclick- The user clicks an HTML element
+Onmouseover-   The user moves the mouse over an HTML element
+Onmouseout-The user moves the mouse away from an HTML element
+Onkeydown- The user pushes a keyboard key
+Onload- The browser has finished loading the page 
+........................................................
+Now will make a button and we want to hide that button if someone clicks on it. But before that we can add some CSS to it to make it look attractive.
+    
+If we want that while clicking the button the paragraph should hide and by again clicking, it should come back, then we can write as follows-
+<button id="btn" onclick="toggleHide()">Show/Hide</button>
+        function toggleHide() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+        }
+
+
+In the same way, there is another event listener known as a mouseover. For example, if we want to alert when the mouse pointer is on the paragraph, then we can write the code as follows-
+
+let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run(){
+            alert('Mouse Inside')
+        });
+
+In the same way, if we want to alert when the pointer is outside the paragraph, we can write the code as follows-
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Events</title>
+</head>
+<style>
+    #btn {
+        padding: 10px 14px;
+        background-color: red;
+        border: 2px solid black;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- Browser events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit 
+    focus
+
+    DOMContentLoaded
+
+    transitionend -->
+
+    <div class="container">
+        <h1>This is my heading </h1>
+        <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut rem quidem quaerat eos minima, neque
+            sapiente ipsam debitis tempore quae sequi autem sunt ea cupiditate? Saepe corporis, laboriosam facere
+            distinctio sint qui unde ipsam molestias officiis totam ullam id illum iusto accusantium dicta aspernatur
+            tempore atque rerum optio consectetur similique ad culpa veritatis. Dolores atque fuga, dignissimos vel
+            velit minus, necessitatibus ipsum culpa recusandae architecto repellendus harum voluptatem placeat fugiat
+            blanditiis minima temporibus vero quasi consectetur odio. Dignissimos veniam ad recusandae nemo quam quia
+            eligepsam soluta eveniet quia assumenda error autem cum repellat eius nisi.
+            Dolores, perferendis, velit nisi omnis dolore voluptatum nostrum quasi, sit odio aut quas quia minus rerum
+            accusamus suscipit ex maiores commodi. Ipsum quisquam quo ab modi vitae animi eaque!</p>
+    </div>
+    <div style="border: solid 2px black;
+    border-radius: 8px;
+    background-color: #619d61;
+    position: absolute;
+    top: 75px;
+    right: 100px;
+    /* display: inline; */
+    padding: 5px;
+    margin: 8px; " id="box">
+        MOUSEOVER/MOUSEOUT
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <script>
+
+        let box = document.getElementById("box");
+        box.addEventListener(
+            'mouseover', function run() {
+                alert("Mouse moved in");
+            }
+        );
+
+        box.addEventListener(
+            'mouseout', function run() {
+                console.log("MOuse went out");
+            }
+        );
+
+
+        function toggleHide() {
+            // let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
