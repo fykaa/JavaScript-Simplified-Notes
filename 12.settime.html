@@ -79,21 +79,24 @@ With the help of these functions, we can create many websites or even websites t
         console.log("Hello Good Morning " + name + " " + byeText);
     }
     // timeOut = setTimeout(greet, 5000, "Harry", "Take Care");
-    // console.log(timeOut);
+    // console.log(timeOut); //this will print a code to timeOut, so you can use this code for clearTimeOut in console
 
-    // clearTimeout(timeOut);
+    // clearTimeout(timeOut); IF YOU TYPE THIS IN CONSOLE , BEFORE THE setTimeOut is execcuted then, setTimeOut execute nahi hoga
 
     // setTimeout(greet(), 12000); --> Wrong as it is calling the function inside setTimeout
 
     // intervalId = setInterval(greet, 1000, "Harry", "Good Night");
-    // clearInterval(intervalId);
+    // clearInterval(intervalId);   //type this in console to clear setInterval named intervalId
 
     function displayTime(){
-        // time = new Date();
-        console.log(time);
-        document.getElementById('time').innerHTML = time;
+        newDate = new Date();
+        // console.log(time);
+        // document.getElementById('time').innerHTML = newDate;
+                // or
+        time.innerHTML = newDate
     }
-    setInterval(displayTime,  10000);
+    dateAndTime = setInterval(displayTime, 1000);
+        // so if you type clearInterval(dateAndTime) in console, time runnign will stop
     </script>
 </body>
 </html>

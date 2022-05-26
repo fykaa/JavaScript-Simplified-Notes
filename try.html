@@ -136,6 +136,10 @@
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse est porro mollitia cum id laboriosam excepturi voluptas officia repellat molestiae ipsum nihil non numquam eveniet ut commodi architecto sapiente similique, ad, fuga quasi quis.
     </div>
 
+    <div>
+        Time is 
+        <span id="time"></span>
+    </div>
     <button id="btn" onclick="toggleHide()">SHOW OR HIDE</button>
 
     <script>
@@ -176,6 +180,45 @@
                 console.log("MOuse went out");
             }
         );
+
+        function greeet(name, byeText){
+            console.log("Hello GM "+ name + " " + byeText);
+        }
+        
+
+        
+        setTimeout(greeet, 2000, "harry", "bye bye");
+        // setTimeout(greeet(), 2000, "harry" , "hk");  this is wrong cant call a function with parenthesis () in settimeOut
+        
+        timeOut = setTimeout(greeet, 3000, "shweta", "byeee bye");
+        console.log(timeOut);    //this will print a code to timeOut, so you can use this code for clearTimeOut in console
+        // clearTimeout(code) IF YOU TYPE THIS IN CONSOLE , BEFORE THE setTimeOut is execcuted then, setTimeOut execute nahi hoga
+        // clearTimeout(code) IF YOU TYPE THIS IN CONSOLE , BEFORE THE setTimeOut is execcuted then, setTimeOut execute nahi hoga
+
+        // intervalId = setInterval(greeet, 1000, "intervia", " sdfs");
+        // clearInterval(intervalId);   //type this in console to clear setInterval named intervalId
+
+        function displayTime() {
+            time = new Date;
+            // console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        dateAndTime = setInterval(displayTime, 1000);
+        // so if you type clearInterval(dateAndTime) in console, time runnign will stop
+
+
+        let google = {
+            greet : "heello",
+            names : ["brasdf", 32,"fd", "sdfA8"],
+            speaks(){
+                this.names.forEach((student)=>
+                {console.log(this.greet+ student);}
+                );
+            }
+        }
+        google.speaks();
+
+
     </script>
 </body>
 </html>

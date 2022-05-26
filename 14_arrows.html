@@ -1,0 +1,131 @@
+<!-- JavaScript Tutorial: Arrow Functions In JavaScript | Web Development Tutorials #60
+In this tutorial, we are going to learn about Arrow Functions and Lexical this used in JavaScript. Make a new file as tut60.html and add an instant boilerplate to get the basic HTML code. Then give the title as Arrow Functions under the <title> tag.
+
+An arrow function expression is a syntactically compact alternative to a regular function expression, although without its own bindings to this, arguments, super or new.target keywords. Arrow function expressions are ill-suited as methods, and they cannot be used as constructors.
+
+Let us understand by example. If we simply write the below JavaScript-
+
+function greet() {
+         console.log('Good morning');
+    }
+
+    greet();
+
+    But if we write the same function with the help of arrow functions then our work will reduce as follows-
+
+// Arrow function
+     let greet =  ()=> {
+         console.log('Good morning');
+     }
+
+
+We will get the same output as the above after executing this code. This function can also be used with the setTimeout() function as follows-
+
+setTimeout(() => {
+        console.log("We are inside settimeout");
+    }, 3000);
+With the help of arrow functions, it is not necessary to define the whole function and its components. We will get the output after 3 seconds as follows-
+
+We can also simply add the two numbers with the arrow functions as follows-
+
+let sum2 = (a, b) => a+b;
+If we have any single variable in our code, then we don’t need to put any braces also. The example for this is as follows-
+
+let half = a => a/2;
+This function will return half the value of a.
+
+Now let us see the use of lexical this with the help of an example. If we make the object obj1 and an array of names and then make a function as speak which does the following task as follows-
+
+let obj1={
+        names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+        speak(){
+            this.names.forEach((student)=>{
+                console.log("Kukdoo Koo " + student);
+            });
+        }
+    }
+    obj1.speak();
+We know that after running this function, we will get the expected output as follows-
+
+
+
+
+In the above example, we have made a speak function, add a forEach() loop to it, and then added an arrow function. But if we add a variable greeting and add this.greeting inside the console.log as follows-
+
+let obj1={
+        greeting: "Good Morning",
+        names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+        speak(){
+            this.names.forEach((student)=>{
+                console.log(this.greeting + " Kukdoo Koo " + student);
+            });
+        }
+    }
+    obj1.speak();
+This variable is normally used to point the variable inside the function. But in the case of arrow functions, it points the variable outside the function. This is known as lexical this. Therefore, we get the output as follows-
+
+So I believe, you must have understood the concept of arrow functions and lexical this with the help of this tutorial.
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arroe Fycntions</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    setTimeout(() => {
+        console.log("Hey printed chekc");
+    }, 3000);
+
+
+    let sum = (a, b) => {
+        return a+b;
+    }
+    //or
+    let product = (a, b) => a*b;
+    //or
+    let half = a => a/2;
+    //or
+    let greet = () => console.log("greeting function made");
+
+
+    // let object ={
+    //     greeting: "Happy good morning",
+    //     names: ["harry", "sejal ", "rahul" , "kabir", "sanaya"],
+    //     speak(){
+    //         this.names.forEach((student)=> {
+    //         console.log(this.greeting + " Dear " + student);
+    //     });
+    //     }
+    // }
+    // object.speak();
+
+        // OR
+
+    let object ={
+        greeting: "Happy good morning",
+        names: ["harry", "sejal ", "rahul" , "kabir", "sanaya"],
+        speak(){
+            this.names.forEach( function s (student) {
+            console.log(this.greeting + " Dear " + student);
+        });
+        // SO THIS SHOWED UNDEFINED
+        }
+    }
+    object.speak();
+
+
+
+</script>
+</html>
